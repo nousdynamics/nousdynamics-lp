@@ -6,7 +6,7 @@
   --color-premium-gold-dark: #8A7560;
   --color-premium-dark: #010100;
 
-  --font-sans: "Inter", "sans-serif";
+  --font-sans: "Geist", sans-serif;
   --font-serif: "Playfair Display", "serif";
 
   --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
@@ -54,14 +54,12 @@
 
 @layer base {
   body {
-    @apply bg-[#010100] text-[#FFFFFE] antialiased selection:bg-premium-gold/30 selection:text-premium-gold font-sans;
+    @apply bg-premium-dark text-[#FFFFFE] antialiased selection:bg-premium-gold/30 selection:text-premium-gold font-sans;
   }
 
   h1,
-  h2,
-  h3,
-  h4 {
-    @apply font-serif;
+  h2 {
+    @apply font-serif;  
   }
 
   option {
@@ -103,7 +101,7 @@
   .bg-lux-grid {
     background-color: #010100;
     background-image:
-      radial-gradient(at 50% 0%, rgba(197, 168, 142, 0.15) 0px, transparent 70%),
+      radial-gradient(circle at 66% 50%, rgba(197, 168, 142, 0.2) 0px, rgba(197, 168, 142, 0.08) 30%, transparent 60%),
       linear-gradient(to bottom, transparent, #010100 90%);
   }
 

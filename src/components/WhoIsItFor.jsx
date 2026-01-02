@@ -1,7 +1,79 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, ArrowDown, TrendingUp } from 'lucide-react';
+import { Check, ArrowDown, TrendingUp, Target, Repeat2 } from 'lucide-react';
 
+// --- COMPONENTES AUXILIARES DA ANIMAÇÃO ---
+
+// 1. Círculo dos ícones
+const Circle = ({ className = "", children }) => {
+  return (
+    <div
+      className={
+        "z-10 flex size-14 md:size-16 items-center justify-center rounded-full " +
+        "border-2 border-premium-gold/80 bg-[#050505] " +
+        "shadow-[0_0_25px_rgba(197,168,142,0.25)] " +
+        className
+      }
+    >
+      {children}
+    </div>
+  );
+};
+
+// 2. Caminho das linhas (SVG)
+const TreePath = ({ className }) => {
+  // Coordenadas para conectar o topo (50, 15) aos 3 pontos inferiores
+  const pathCenter = "M 50 15 V 85"; 
+  const pathLeft = "M 50 15 V 50 H 16.5 V 85";
+  const pathRight = "M 50 15 V 50 H 83.5 V 85";
+
+  return (
+    <svg
+      fill="none"
+      width="100%"
+      height="100%"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="none"
+      className={`absolute top-0 left-0 w-full h-full pointer-events-none ${className}`}
+    >
+      {/* Linhas de base (escuras) */}
+      <path d={pathCenter} stroke="rgba(197,168,142,0.15)" strokeWidth="0.5" />
+      <path d={pathLeft} stroke="rgba(197,168,142,0.15)" strokeWidth="0.5" />
+      <path d={pathRight} stroke="rgba(197,168,142,0.15)" strokeWidth="0.5" />
+
+      {/* Feixes de luz animados */}
+      <motion.path
+        d={pathCenter}
+        stroke="#C5A88E"
+        strokeWidth="1"
+        strokeLinecap="round"
+        initial={{ pathLength: 0, opacity: 0 }}
+        animate={{ pathLength: 1, opacity: 1 }}
+        transition={{ duration: 2, repeat: Infinity, ease: "linear", repeatDelay: 1 }}
+      />
+      <motion.path
+        d={pathLeft}
+        stroke="#C5A88E"
+        strokeWidth="1"
+        strokeLinecap="round"
+        initial={{ pathLength: 0, opacity: 0 }}
+        animate={{ pathLength: 1, opacity: 1 }}
+        transition={{ duration: 2.5, repeat: Infinity, ease: "linear", repeatDelay: 0.5 }}
+      />
+      <motion.path
+        d={pathRight}
+        stroke="#C5A88E"
+        strokeWidth="1"
+        strokeLinecap="round"
+        initial={{ pathLength: 0, opacity: 0 }}
+        animate={{ pathLength: 1, opacity: 1 }}
+        transition={{ duration: 2.5, repeat: Infinity, ease: "linear", repeatDelay: 0.5 }}
+      />
+    </svg>
+  );
+};
+
+// --- DADOS ---
 const reasons = [
     {
         title: "Agenda cheia, faturamento estagnado",
@@ -17,11 +89,14 @@ const reasons = [
     }
 ];
 
+// --- COMPONENTE PRINCIPAL ---
 const WhoIsItFor = () => {
     return (
         <section id="quem-somos" className="py-24 bg-[#050505] relative z-10">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    
+                    {/* === COLUNA DA ESQUERDA (TEXTOS) === */}
                     <div>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
@@ -53,55 +128,113 @@ const WhoIsItFor = () => {
                                 </motion.li>
                             ))}
                         </ul>
-
+                        
+                        {/* CTA Actions */}
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.4 }}
-                            className="mt-10"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3 }}
+                        className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full justify-start"
                         >
                             <a
-                                href="#contato"
-                                className="inline-flex items-center gap-2 text-white font-medium hover:text-premium-gold transition-colors group"
+                            href="#contato"
+                            className="group relative h-12 px-12 flex items-center justify-center bg-premium-gold text-premium-dark text-sm font-semibold rounded-full overflow-hidden transition-all hover:bg-[#E8D4C1] shadow-[0_0_30px_-10px_rgba(197,168,142,0.4)]"
                             >
                                 Sim, essa solução é para mim
-                                <ArrowDown className="w-4 h-4 transition-transform group-hover:translate-y-1" />
+                                <ArrowDown className="ml-2 w-4 h-4 transition-transform group-hover:translate-y-1" />
                             </a>
                         </motion.div>
                     </div>
 
-                    {/* Abstract Visual Right */}
+                    {/* === COLUNA DA DIREITA (ANIMAÇÃO TREE PATH) === */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="relative h-[500px] w-full bg-[#080808] border border-premium-gold/10 rounded-2xl overflow-hidden flex items-center justify-center"
+                        className="relative h-[450px] md:h-[500px] w-full bg-[#080808] border border-premium-gold/10 rounded-2xl overflow-hidden flex flex-col items-center justify-center p-8"
                     >
-                        <div className="absolute inset-0 bg-lux-grid opacity-50"></div>
+                        {/* Fundo Grid */}
+                        <div className="absolute inset-0 bg-lux-grid opacity-40"></div>
 
-                        {/* Orbiting element */}
-                        <div className="relative w-64 h-64 border border-premium-gold/20 rounded-full animate-[spin_20s_linear_infinite]">
-                            <div className="absolute inset-2 border border-premium-gold/10 rounded-full"></div>
-                            <div className="absolute -top-2 left-1/2 w-4 h-4 bg-premium-gold rounded-full shadow-[0_0_15px_rgba(197,168,142,0.8)]"></div>
-                        </div>
+                        {/* Container da Animação */}
+                        <div className="relative w-full h-full max-w-md flex flex-col justify-between py-6">
+                            
+                            {/* SVG das Linhas (Fundo) */}
+                            <TreePath />
 
-                        {/* Floating stat card */}
-                        <motion.div
-                            animate={{ y: [0, -10, 0] }}
-                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute glass-panel px-6 py-4 rounded-xl bottom-10"
-                        >
-                            <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 bg-premium-gold/20 rounded-full flex items-center justify-center">
-                                    <TrendingUp className="w-5 h-5 text-premium-gold" />
-                                </div>
-                                <div>
-                                    <p className="text-[10px] text-slate-400 uppercase tracking-widest">Crescimento Previsível</p>
-                                    <p className="text-white font-serif text-lg">+145% LTV</p>
-                                </div>
+                            {/* 1. Logo no Topo */}
+                            <div className="relative z-20 flex justify-center">
+                                <motion.div
+                                    initial={{ scale: 0.8, opacity: 0 }}
+                                    whileInView={{ scale: 1, opacity: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.2 }}
+                                >
+                                    <Circle className="size-20 md:size-20 border-4 bg-[#1a1a1a]">
+                                        <img
+                                            src="assets/Nous Dynamics-Favicon--dark.png"
+                                            alt="Nous Dynamics"
+                                            className="w-10 h-10 md:w-12 md:h-12 object-contain rounded-full"
+                                        />
+                                    </Circle>
+                                </motion.div>
                             </div>
-                        </motion.div>
+
+                            {/* 2. Ícones na Base */}
+                            <div className="relative z-20 flex justify-between items-end w-full">
+                                {/* Esquerda */}
+                                <motion.div 
+                                    initial={{ y: 10, opacity: 0 }}
+                                    whileInView={{ y: 0, opacity: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.4 }}
+                                    className="flex flex-col items-center w-1/3 "
+                                >
+                                    <Circle>
+                                    <img
+                                            src="assets/Agenda cheia.png"
+                                            alt="Nous Dynamics"
+                                            className="w-6 h-6 md:w-8 md:h-8 object-contain "
+                                        />
+                                    </Circle>
+                                </motion.div>
+
+                                {/* Centro */}
+                                <motion.div 
+                                    initial={{ y: 10, opacity: 0 }}
+                                    whileInView={{ y: 0, opacity: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.5 }}
+                                    className="flex flex-col items-center w-1/3"
+                                >
+                                    <Circle>
+                                    <img
+                                            src="assets/LTV.png"
+                                            alt="Nous Dynamics"
+                                            className="6 h-6 md:w-8 md:h-8 object-contain"
+                                        />
+                                    </Circle>
+                                </motion.div>
+
+                                {/* Direita */}
+                                <motion.div 
+                                    initial={{ y: 10, opacity: 0 }}
+                                    whileInView={{ y: 0, opacity: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.6 }}
+                                    className="flex flex-col items-center w-1/3"
+                                >
+                                    <Circle>
+                                          <img
+                                            src="assets/Fatura acima.png"
+                                            alt="Nous Dynamics"
+                                            className="6 h-6 md:w-8 md:h-8 object-contain"
+                                          />
+                                    </Circle>
+                                </motion.div>
+                            </div>
+                        </div>
                     </motion.div>
                 </div>
             </div>

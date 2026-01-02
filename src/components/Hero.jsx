@@ -27,7 +27,7 @@ const Hero = () => {
                 >
                     Sua agenda cheia,<br />
                     o lucro <span className="inline-block relative">
-                        <span className="bg-clip-text italic text-transparent bg-gradient-to-br from-[#DFBFA7] to-[#DFBFA7] z-10 pr-2 relative">
+                        <span className="bg-clip-text italic text-transparent bg-linear-to-br from-[#DFBFA7] to-[#DFBFA7] z-10 pr-2 relative">
                             estagnado.
                         </span>
                     </span>
@@ -39,7 +39,7 @@ const Hero = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
-                    className="text-lg text-slate-400 max-w-2xl leading-relaxed mb-10 font-light tracking-wide"
+                    className="text-lg text-gray-300 max-w-2xl leading-relaxed mb-10 font-light tracking-wide"
                 >
                     Transformamos clientes pontuais em receita recorrente. Aumente seu <strong>Lucro</strong> e escale seu
                     faturamento sem depender apenas de novos leads.
@@ -62,7 +62,7 @@ const Hero = () => {
                     </a>
                     <a
                         href="#metodo"
-                        className="h-12 px-8 flex items-center justify-center text-slate-300 text-sm hover:text-white transition-colors border border-transparent hover:border-premium-gold/20 rounded-full"
+                        className="h-12 px-8 flex items-center justify-center text-gray-300 text-sm hover:text-white transition-colors border border-transparent hover:border-premium-gold/20 rounded-full"
                     >
                         Conhecer Método
                     </a>

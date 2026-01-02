@@ -53,7 +53,7 @@ const Method = () => {
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="md:max-w-xl text-xs md:text-base text-slate-400 leading-relaxed font-light text-wrap"
+                        className="md:max-w-xl text-xs md:text-base text-gray-300 leading-relaxed font-light text-wrap"
                     >
                         Um sistema em 4 etapas para construir previsibilidade de vendas, aumentar o LTV
                         e fazer sua empresa crescer sem depender apenas de novos leads frios.
@@ -70,16 +70,16 @@ const Method = () => {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                             className={`group relative overflow-hidden rounded-xl border px-6 py-8 transition-all duration-300 hover:-translate-y-1.5 ${step.highlight
-                                ? "border-premium-gold/70 bg-gradient-to-b from-[#111] to-[#050403] shadow-[0_22px_50px_rgba(197,168,142,0.30)]"
-                                : "border-[#181818] bg-gradient-to-b from-[#070707] to-black shadow-[0_18px_40px_rgba(0,0,0,0.7)] hover:border-premium-gold/70"
+                                ? "border-premium-gold/70 bg-linear-to-b from-[#111] to-[#050403] shadow-[0_22px_50px_rgba(197,168,142,0.30)]"
+                                : "border-[#181818] bg-linear-to-b from-[#070707] to-black shadow-[0_18px_40px_rgba(0,0,0,0.7)] hover:border-premium-gold/70"
                                 }`}
                         >
-                            <div className={`absolute top-4 right-4 flex h-8 w-8 items-center justify-center rounded-full border border-[#2a2a2a] transition-colors ${step.highlight ? "bg-premium-gold text-black border-premium-gold-light/50" : "bg-black/60 text-slate-400 group-hover:text-premium-gold"
+                            <div className={`absolute top-4 right-4 flex h-8 w-8 items-center justify-center rounded-full border border-[#2a2a2a] transition-colors ${step.highlight ? "bg-premium-gold text-black border-premium-gold-light/50" : "bg-black/60 text-gray-400 group-hover:text-premium-gold"
                                 }`}>
                                 <step.icon className="w-4 h-4" strokeWidth={1.7} />
                             </div>
 
-                            <span className={`inline-flex items-center justify-center rounded-full border px-2.5 py-0.5 text-[11px] font-medium tracking-[0.2em] mb-5 transition-colors ${step.highlight ? "bg-premium-gold/10 border-premium-gold-light/60 text-premium-gold-light font-semibold" : "bg-black/70 border-[#2a2a2a] text-slate-400"
+                            <span className={`inline-flex items-center justify-center rounded-full border px-2.5 py-0.5 text-[11px] font-medium tracking-[0.2em] mb-5 transition-colors ${step.highlight ? "bg-premium-gold/10 border-premium-gold-light/60 text-premium-gold-light font-semibold" : "bg-black/70 border-[#2a2a2a] text-gray-400"
                                 }`}>
                                 {step.number}
                             </span>
@@ -87,7 +87,7 @@ const Method = () => {
                             <h3 className="text-lg md:text-xl font-medium text-white mb-3">
                                 {step.title}
                             </h3>
-                            <p className={`text-sm leading-relaxed ${step.highlight ? "text-slate-200" : "text-slate-400"}`}>
+                            <p className={`text-sm leading-relaxed ${step.highlight ? "text-gray-200" : "text-gray-400"}`}>
                                 {step.description}
                             </p>
                         </motion.article>
@@ -103,7 +103,7 @@ const Method = () => {
                 >
                     <a
                         href="#contato"
-                        className="inline-flex items-center gap-2 rounded-full border border-[#2a2a2a] bg-black/40 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-300 hover:border-premium-gold hover:text-white hover:bg-black/70 transition-all group"
+                        className="inline-flex items-center gap-2 rounded-full border border-[#2a2a2a] bg-black/40 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-300 hover:border-premium-gold hover:text-white hover:bg-black/70 transition-all group"
                     >
                         Quero escalar meus resultados
                         <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />

@@ -16,12 +16,9 @@ const Navbar = () => {
                         alt="Nous Dynamics"
                         className="w-7 h-7 rounded-full object-cover"
                     />
-                    <span className="text-sm font-medium tracking-wide text-white hidden sm:block ml-1">
-                        Nous Dynamics
-                    </span>
                 </div>
 
-                <div className="hidden md:flex items-center gap-6 text-xs font-medium text-slate-400">
+                <div className="hidden md:flex items-center gap-8 text-xs font-medium text-gray-300">
                     <a href="#metodo" className="hover:text-white transition-colors">
                         Método
                     </a>
