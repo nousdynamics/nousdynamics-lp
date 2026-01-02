@@ -67,8 +67,8 @@ const ContactForm = () => {
                                 Contato Imediato
                             </div>
                             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-serif leading-tight mb-6 break-words hyphens-auto">
-                                <span className="block md:inline">Pronto para destravar sua</span>{' '}
-                                <span className="block md:inline text-premium-gold italic font-serif">próxima escala?</span>
+                                <span className="block">Pronto para destravar sua</span>
+                                <span className="block text-premium-gold italic font-serif">próxima escala?</span>
                             </h2>
                             <p className="text-base sm:text-lg text-gray-300 font-light leading-relaxed max-w-lg break-words hyphens-auto">
                                 Receba uma análise estratégica gratuita do seu marketing e entenda como podemos otimizar seu LTV hoje mesmo.

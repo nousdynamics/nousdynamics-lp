@@ -23,10 +23,10 @@ const Hero = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 }}
-                    className="text-5xl md:text-7xl lg:text-8xl font-medium text-white tracking-tighter mb-8 leading-[1.05] break-words hyphens-auto"
+                    className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-medium text-white tracking-tighter mb-8 leading-[1.1] break-words hyphens-auto"
                 >
-                    <span className="block md:inline">Sua agenda cheia,</span>{' '}
-                    <span className="block md:inline">o lucro <span className="inline-block relative">
+                    <span className="block">Sua agenda cheia,</span>
+                    <span className="block">o lucro <span className="inline-block relative">
                         <span className="bg-clip-text italic text-transparent bg-linear-to-br from-[#DFBFA7] to-[#DFBFA7] z-10 pr-2 relative">
                             estagnado.
                         </span>

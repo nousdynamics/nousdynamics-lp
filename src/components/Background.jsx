@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 const Background = () => {
     return (
-        <>
-            <div className="premium-bg-container overflow-x-hidden">
+        <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+            <div className="premium-bg-container">
                 <div className="premium-bg-lines"></div>
                 <div className="premium-bg-glow"></div>
                 <div className="noise-overlay"></div>
@@ -12,15 +12,14 @@ const Background = () => {
             
             {/* Abstract Background Glow in Hero - Animado */}
             <motion.div
-                className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[400px] bg-premium-gold/30 rounded-[100%] blur-[120px] pointer-events-none overflow-hidden"
+                className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[150%] md:w-[800px] h-[400px] bg-premium-gold/20 rounded-[100%] blur-[120px]"
                 animate={{
-                    scale: [1, 1.2, 1],
-                    opacity: [0.3, 0.5, 0.3],
-                    x: [0, 50, 0],
-                    y: [0, -30, 0],
+                    scale: [1, 1.1, 1],
+                    opacity: [0.2, 0.4, 0.2],
+                    x: ["-50%", "-45%", "-50%"],
                 }}
                 transition={{
-                    duration: 8,
+                    duration: 10,
                     repeat: Infinity,
                     ease: "easeInOut",
                 }}
@@ -28,21 +27,20 @@ const Background = () => {
             
             {/* Glow adicional animado */}
             <motion.div
-                className="absolute top-1/3 right-1/4 w-full max-w-[600px] h-[300px] bg-premium-gold/5 rounded-[100%] blur-[100px] pointer-events-none overflow-hidden"
+                className="absolute top-1/3 right-0 w-[120%] md:w-[600px] h-[300px] bg-premium-gold/10 rounded-[100%] blur-[100px]"
                 animate={{
-                    scale: [1, 1.3, 1],
-                    opacity: [0.2, 0.4, 0.2],
-                    x: [0, -40, 0],
-                    y: [0, 40, 0],
+                    scale: [1, 1.2, 1],
+                    opacity: [0.1, 0.3, 0.1],
+                    x: ["20%", "10%", "20%"],
                 }}
                 transition={{
-                    duration: 10,
+                    duration: 12,
                     repeat: Infinity,
                     ease: "easeInOut",
                     delay: 2,
                 }}
             />
-        </>
+        </div>
     );
 };
 

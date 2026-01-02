@@ -104,8 +104,8 @@ const WhoIsItFor = () => {
                             viewport={{ once: true }}
                             className="text-3xl md:text-5xl text-white mb-8 leading-tight break-words hyphens-auto"
                         >
-                            <span className="block md:inline">Esta solução é ideal</span>{' '}
-                            <span className="block md:inline text-premium-gold italic font-serif">para você que:</span>
+                            <span className="block">Esta solução é ideal</span>
+                            <span className="block text-premium-gold italic font-serif">para você que:</span>
                         </motion.h2>
 
                         <ul className="space-y-6">
