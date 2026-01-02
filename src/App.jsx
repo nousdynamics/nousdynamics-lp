@@ -9,11 +9,11 @@ import Background from './components/Background';
 
 function App() {
   return (
-    <div className="min-h-screen selection:bg-premium-gold/30 selection:text-premium-gold font-sans">
+    <div className="min-h-screen selection:bg-premium-gold/30 selection:text-premium-gold font-sans overflow-x-hidden w-full">
       <Background />
       <Navbar />
 
-      <main>
+      <main className="overflow-x-hidden w-full">
         <Hero />
         <Method />
         <WhoIsItFor />

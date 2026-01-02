@@ -23,14 +23,14 @@ const Hero = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 }}
-                    className="text-5xl md:text-7xl lg:text-8xl font-medium text-white tracking-tighter mb-8 leading-[1.05]"
+                    className="text-5xl md:text-7xl lg:text-8xl font-medium text-white tracking-tighter mb-8 leading-[1.05] break-words hyphens-auto"
                 >
-                    Sua agenda cheia,<br />
-                    o lucro <span className="inline-block relative">
+                    <span className="block md:inline">Sua agenda cheia,</span>{' '}
+                    <span className="block md:inline">o lucro <span className="inline-block relative">
                         <span className="bg-clip-text italic text-transparent bg-linear-to-br from-[#DFBFA7] to-[#DFBFA7] z-10 pr-2 relative">
                             estagnado.
                         </span>
-                    </span>
+                    </span></span>
                 </motion.h1>
 
                 {/* Subheadline */}
@@ -39,7 +39,7 @@ const Hero = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
-                    className="text-lg text-gray-300 max-w-2xl leading-relaxed mb-10 font-light tracking-wide"
+                    className="text-base sm:text-lg text-gray-300 max-w-2xl leading-relaxed mb-10 font-light tracking-wide break-words hyphens-auto px-2 sm:px-0"
                 >
                     Transformamos clientes pontuais em receita recorrente. Aumente seu <strong>Lucro</strong> e escale seu
                     faturamento sem depender apenas de novos leads.
@@ -55,10 +55,10 @@ const Hero = () => {
                 >
                     <a
                         href="#contato"
-                        className="group relative h-12 px-8 flex items-center justify-center bg-premium-gold text-premium-dark text-sm font-semibold rounded-full overflow-hidden transition-all hover:bg-[#E8D4C1] shadow-[0_0_30px_-10px_rgba(197,168,142,0.4)]"
+                        className="group relative h-12 px-6 sm:px-8 flex items-center justify-center bg-premium-gold text-premium-dark text-xs sm:text-sm font-semibold rounded-full overflow-hidden transition-all hover:bg-[#E8D4C1] shadow-[0_0_30px_-10px_rgba(197,168,142,0.4)] whitespace-nowrap"
                     >
                         <span className="mr-2">Agendar Análise Gratuita</span>
-                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 flex-shrink-0" />
                     </a>
                     <a
                         href="#metodo"

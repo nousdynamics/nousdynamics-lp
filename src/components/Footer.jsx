@@ -12,10 +12,10 @@ const Footer = () => {
                     />
                     <span className="text-xs text-gray-400 ml-2">© 2024</span>
                 </div>
-                <div className="flex gap-8 text-sm text-gray-400 font-light">
-                    <a href="#" className="hover:text-premium-gold transition-colors">Privacidade</a>
-                    <a href="#" className="hover:text-premium-gold transition-colors">Termos</a>
-                    <a href="#" className="hover:text-premium-gold transition-colors">Instagram</a>
+                <div className="flex flex-wrap gap-4 sm:gap-8 text-xs sm:text-sm text-gray-400 font-light">
+                    <a href="#" className="hover:text-premium-gold transition-colors break-words">Privacidade</a>
+                    <a href="#" className="hover:text-premium-gold transition-colors break-words">Termos</a>
+                    <a href="#" className="hover:text-premium-gold transition-colors break-words">Instagram</a>
                 </div>
             </div>
         </footer>

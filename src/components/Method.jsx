@@ -44,7 +44,7 @@ const Method = () => {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-4xl lg:text-5xl text-white leading-tight"
+                        className="text-3xl md:text-4xl lg:text-5xl text-white leading-tight break-words hyphens-auto"
                     >
                         O Método Nous Leads
                     </motion.h2>
@@ -53,7 +53,7 @@ const Method = () => {
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="md:max-w-xl text-xs md:text-base text-gray-300 leading-relaxed font-light text-wrap"
+                        className="md:max-w-xl text-xs md:text-base text-gray-300 leading-relaxed font-light break-words hyphens-auto"
                     >
                         Um sistema em 4 etapas para construir previsibilidade de vendas, aumentar o LTV
                         e fazer sua empresa crescer sem depender apenas de novos leads frios.
@@ -84,10 +84,10 @@ const Method = () => {
                                 {step.number}
                             </span>
 
-                            <h3 className="text-lg md:text-xl font-medium text-white mb-3">
+                            <h3 className="text-lg md:text-xl font-medium text-white mb-3 break-words hyphens-auto">
                                 {step.title}
                             </h3>
-                            <p className={`text-sm leading-relaxed ${step.highlight ? "text-gray-200" : "text-gray-400"}`}>
+                            <p className={`text-sm leading-relaxed break-words hyphens-auto ${step.highlight ? "text-gray-200" : "text-gray-400"}`}>
                                 {step.description}
                             </p>
                         </motion.article>
@@ -103,10 +103,10 @@ const Method = () => {
                 >
                     <a
                         href="#contato"
-                        className="inline-flex items-center gap-2 rounded-full border border-[#2a2a2a] bg-black/40 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-300 hover:border-premium-gold hover:text-white hover:bg-black/70 transition-all group"
+                        className="inline-flex items-center gap-2 rounded-full border border-[#2a2a2a] bg-black/40 px-4 sm:px-6 py-3 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-300 hover:border-premium-gold hover:text-white hover:bg-black/70 transition-all group text-center break-words"
                     >
-                        Quero escalar meus resultados
-                        <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                        <span className="whitespace-normal sm:whitespace-nowrap">Quero escalar meus resultados</span>
+                        <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1 flex-shrink-0" />
                     </a>
                 </motion.div>
             </div>

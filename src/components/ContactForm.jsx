@@ -63,13 +63,14 @@ const ContactForm = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                         >
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border uppercase border-premium-gold/20 bg-premium-gold/5 text-premium-gold text-[10px] md:text-[0.8em]   tracking-[0.2em] mb-6">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border uppercase border-premium-gold/20 bg-premium-gold/5 text-premium-gold text-[10px] md:text-[0.8em] tracking-[0.2em] mb-6 whitespace-nowrap">
                                 Contato Imediato
                             </div>
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl text-white font-serif leading-tight mb-6">
-                                Pronto para destravar sua <span className="text-premium-gold italic font-serif">próxima escala?</span>
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-serif leading-tight mb-6 break-words hyphens-auto">
+                                <span className="block md:inline">Pronto para destravar sua</span>{' '}
+                                <span className="block md:inline text-premium-gold italic font-serif">próxima escala?</span>
                             </h2>
-                            <p className="text-lg text-gray-300 font-light leading-relaxed max-w-lg">
+                            <p className="text-base sm:text-lg text-gray-300 font-light leading-relaxed max-w-lg break-words hyphens-auto">
                                 Receba uma análise estratégica gratuita do seu marketing e entenda como podemos otimizar seu LTV hoje mesmo.
                             </p>
                         </motion.div>
@@ -86,8 +87,8 @@ const ContactForm = () => {
                                     <Clock className="w-5 h-5 text-premium-gold" />
                                 </div>
                                 <div>
-                                    <h4 className="text-white font-medium">Resposta em até 24h</h4>
-                                    <p className="text-sm text-gray-400">Nosso time entrará em contato via WhatsApp ou E-mail.</p>
+                                    <h4 className="text-white font-medium break-words">Resposta em até 24h</h4>
+                                    <p className="text-sm text-gray-400 break-words hyphens-auto">Nosso time entrará em contato via WhatsApp ou E-mail.</p>
                                 </div>
                             </motion.div>
                             <motion.div
@@ -101,8 +102,8 @@ const ContactForm = () => {
                                     <ShieldCheck className="w-5 h-5 text-premium-gold" />
                                 </div>
                                 <div>
-                                    <h4 className="text-white font-medium">Dados Protegidos</h4>
-                                    <p className="text-sm text-gray-400">Suas informações são tratadas com total sigilo estratégico.</p>
+                                    <h4 className="text-white font-medium break-words">Dados Protegidos</h4>
+                                    <p className="text-sm text-gray-400 break-words hyphens-auto">Suas informações são tratadas com total sigilo estratégico.</p>
                                 </div>
                             </motion.div>
                         </div>
@@ -138,7 +139,7 @@ const ContactForm = () => {
                                     />
                                 </div>
                             </div>
-                                <span>+50 empresas satisfeitas com o nosso trabalho</span>
+                                <span className="break-words hyphens-auto">+50 empresas satisfeitas com o nosso trabalho</span>
                             </div>
                         </motion.div>
                     </div>
@@ -155,7 +156,7 @@ const ContactForm = () => {
 
                             <form onSubmit={handleSubmit} className="space-y-5 relative z-10">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] md:text-[0.8em] text-premium-gold    ml-1">Nome</label>
+                                    <label className="text-[10px] md:text-[0.8em] text-premium-gold ml-1 break-words">Nome</label>
                                     <input
                                         name="name"
                                         value={formData.name}
@@ -168,7 +169,7 @@ const ContactForm = () => {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-[10px] md:text-[0.8em] text-premium-gold    ml-1">E-mail</label>
+                                    <label className="text-[10px] md:text-[0.8em] text-premium-gold ml-1 break-words">E-mail</label>
                                     <input
                                         name="email"
                                         value={formData.email}
@@ -181,7 +182,7 @@ const ContactForm = () => {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-[10px] md:text-[0.8em] text-premium-gold    ml-1">DDD + Telefone</label>
+                                    <label className="text-[10px] md:text-[0.8em] text-premium-gold ml-1 break-words">DDD + Telefone</label>
                                     <div className="flex gap-2">
                                         <div className="relative flex-shrink-0">
                                             <select
@@ -211,7 +212,7 @@ const ContactForm = () => {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-[10px] md:text-[0.8em] text-premium-gold    ml-1">Site (Não obrigatório)</label>
+                                    <label className="text-[10px] md:text-[0.8em] text-premium-gold ml-1 break-words">Site (Não obrigatório)</label>
                                     <input
                                         name="site"
                                         value={formData.site}
@@ -223,7 +224,7 @@ const ContactForm = () => {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-[10px] md:text-[0.8em] text-premium-gold    ml-1">Quanto você investe/pretende investir por mês em Anúncios online?</label>
+                                    <label className="text-[10px] md:text-[0.8em] text-premium-gold ml-1 break-words hyphens-auto block">Quanto você investe/pretende investir por mês em Anúncios online?</label>
                                     <div className="relative">
                                         <select
                                             name="googleAdsInvestment"
@@ -244,7 +245,7 @@ const ContactForm = () => {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-[10px] md:text-[0.8em] text-premium-gold    ml-1">Número de funcionários</label>
+                                    <label className="text-[10px] md:text-[0.8em] text-premium-gold ml-1 break-words">Número de funcionários</label>
                                     <div className="relative">
                                         <select
                                             name="employees"
@@ -265,7 +266,7 @@ const ContactForm = () => {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-[10px] md:text-[0.8em] text-premium-gold    ml-1">Mensagem</label>
+                                    <label className="text-[10px] md:text-[0.8em] text-premium-gold ml-1 break-words">Mensagem</label>
                                     <textarea
                                         name="message"
                                         value={formData.message}
@@ -280,10 +281,10 @@ const ContactForm = () => {
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                     type="submit"
-                                    className="w-full mt-4 btn-premium text-premium-dark font-bold py-4 rounded-xl shadow-xl shadow-premium-gold/10 text-xs  tracking-[0.2em] flex items-center justify-center gap-3 group"
+                                    className="w-full mt-4 btn-premium text-premium-dark font-bold py-4 rounded-xl shadow-xl shadow-premium-gold/10 text-[10px] sm:text-xs tracking-[0.2em] flex items-center justify-center gap-3 group"
                                 >
-                                    <span>CONSULTORIA GRATUITA</span>
-                                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                    <span className="whitespace-nowrap">CONSULTORIA GRATUITA</span>
+                                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 flex-shrink-0" />
                                 </motion.button>
                             </form>
                         </div>

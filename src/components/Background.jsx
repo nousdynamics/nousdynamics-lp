@@ -13,7 +13,7 @@ const Background = () => {
 
     return (
         <>
-            <div className="premium-bg-container">
+            <div className="premium-bg-container overflow-x-hidden">
                 <div className="premium-bg-lines"></div>
                 <div className="premium-bg-glow"></div>
                 <div className="noise-overlay"></div>
@@ -22,7 +22,7 @@ const Background = () => {
                 {floatingParticles.map((particle) => (
                     <motion.div
                         key={particle.id}
-                        className="absolute w-1 h-1 bg-premium-gold/20 rounded-full"
+                        className="absolute w-1 h-1 bg-premium-gold/50 rounded-full"
                         style={{
                             left: `${particle.x}%`,
                             top: `${particle.y}%`,
@@ -45,7 +45,7 @@ const Background = () => {
             
             {/* Abstract Background Glow in Hero - Animado */}
             <motion.div
-                className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-premium-gold/10 rounded-[100%] blur-[120px] pointer-events-none"
+                className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[400px] bg-premium-gold/30 rounded-[100%] blur-[120px] pointer-events-none overflow-hidden"
                 animate={{
                     scale: [1, 1.2, 1],
                     opacity: [0.3, 0.5, 0.3],
@@ -61,7 +61,7 @@ const Background = () => {
             
             {/* Glow adicional animado */}
             <motion.div
-                className="absolute top-1/3 right-1/4 w-[600px] h-[300px] bg-premium-gold/5 rounded-[100%] blur-[100px] pointer-events-none"
+                className="absolute top-1/3 right-1/4 w-full max-w-[600px] h-[300px] bg-premium-gold/5 rounded-[100%] blur-[100px] pointer-events-none overflow-hidden"
                 animate={{
                     scale: [1, 1.3, 1],
                     opacity: [0.2, 0.4, 0.2],

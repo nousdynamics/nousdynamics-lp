@@ -102,10 +102,10 @@ const WhoIsItFor = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="text-3xl md:text-5xl text-white mb-8 leading-tight"
+                            className="text-3xl md:text-5xl text-white mb-8 leading-tight break-words hyphens-auto"
                         >
-                            Esta solução é ideal <br />
-                            <span className="text-premium-gold italic font-serif">para você que:</span>
+                            <span className="block md:inline">Esta solução é ideal</span>{' '}
+                            <span className="block md:inline text-premium-gold italic font-serif">para você que:</span>
                         </motion.h2>
 
                         <ul className="space-y-6">
@@ -122,8 +122,8 @@ const WhoIsItFor = () => {
                                         <Check className="w-3 h-3 text-premium-gold" />
                                     </div>
                                     <div>
-                                        <h4 className="text-white text-lg font-medium mb-1">{reason.title}</h4>
-                                        <p className="text-slate-400 text-sm font-light leading-relaxed">{reason.description}</p>
+                                        <h4 className="text-white text-lg font-medium mb-1 break-words hyphens-auto">{reason.title}</h4>
+                                        <p className="text-slate-400 text-sm font-light leading-relaxed break-words hyphens-auto">{reason.description}</p>
                                     </div>
                                 </motion.li>
                             ))}
@@ -139,10 +139,10 @@ const WhoIsItFor = () => {
                         >
                             <a
                             href="#contato"
-                            className="group relative h-12 px-12 flex items-center justify-center bg-premium-gold text-premium-dark text-sm font-semibold rounded-full overflow-hidden transition-all hover:bg-[#E8D4C1] shadow-[0_0_30px_-10px_rgba(197,168,142,0.4)]"
+                            className="group relative h-12 px-6 sm:px-12 flex items-center justify-center bg-premium-gold text-premium-dark text-xs sm:text-sm font-semibold rounded-full overflow-hidden transition-all hover:bg-[#E8D4C1] shadow-[0_0_30px_-10px_rgba(197,168,142,0.4)] whitespace-nowrap"
                             >
-                                Sim, essa solução é para mim
-                                <ArrowDown className="ml-2 w-4 h-4 transition-transform group-hover:translate-y-1" />
+                                <span>Sim, essa solução é para mim</span>
+                                <ArrowDown className="ml-2 w-4 h-4 transition-transform group-hover:translate-y-1 flex-shrink-0" />
                             </a>
                         </motion.div>
                     </div>
