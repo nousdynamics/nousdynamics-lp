@@ -116,24 +116,24 @@ const ContactForm = () => {
                         >
                             <div className="flex items-center gap-2 text-gray-400 text-xs font-light">
                             <div className="flex -space-x-2">
-                                <div className="w-6 h-6 rounded-full border-2 border-premium-dark bg-gray-800 overflow-hidden">
+                                <div className="w-6 h-6 rounded-full border-2 border-premium-gold bg-gray-800 overflow-hidden">
                                     <img 
-                                        src="public/assets/CASAL PEDIATRA.png" 
-                                        alt="Cliente 1" 
+                                        src="assets/CASAL PEDIATRA.png" 
+                                        alt="Casal Pediatra" 
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <div className="w-6 h-6 rounded-full border-2 border-premium-dark bg-gray-800 overflow-hidden">
+                                <div className="w-6 h-6 rounded-full border-2 border-premium-gold bg-gray-800 overflow-hidden">
                                     <img 
-                                        src="public/assets/YEVENT.png" 
-                                        alt="Cliente 2" 
+                                        src="assets/YEVENT.png" 
+                                        alt="Yevent" 
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <div className="w-6 h-6 rounded-full border-2 border-premium-dark bg-gray-800 overflow-hidden">
+                                <div className="w-6 h-6 rounded-full border-2 border-premium-gold bg-gray-800 overflow-hidden">
                                     <img 
-                                        src="public/assets/DR ROBERTA.png" 
-                                        alt="Cliente 3" 
+                                        src="assets/DR ROBERTA.png" 
+                                        alt="Dra. Roberta" 
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
