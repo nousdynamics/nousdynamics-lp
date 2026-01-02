@@ -2,45 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Background = () => {
-    // Animação para partículas flutuantes
-    const floatingParticles = Array.from({ length: 20 }).map((_, i) => ({
-        id: i,
-        x: Math.random() * 100,
-        y: Math.random() * 100,
-        delay: Math.random() * 5,
-        duration: 10 + Math.random() * 10,
-    }));
-
     return (
         <>
             <div className="premium-bg-container overflow-x-hidden">
                 <div className="premium-bg-lines"></div>
                 <div className="premium-bg-glow"></div>
                 <div className="noise-overlay"></div>
-                
-                {/* Partículas animadas */}
-                {floatingParticles.map((particle) => (
-                    <motion.div
-                        key={particle.id}
-                        className="absolute w-1 h-1 bg-premium-gold/50 rounded-full"
-                        style={{
-                            left: `${particle.x}%`,
-                            top: `${particle.y}%`,
-                        }}
-                        animate={{
-                            y: [0, -30, 0],
-                            x: [0, Math.sin(particle.id) * 20, 0],
-                            opacity: [0.2, 0.5, 0.2],
-                            scale: [1, 1.5, 1],
-                        }}
-                        transition={{
-                            duration: particle.duration,
-                            repeat: Infinity,
-                            delay: particle.delay,
-                            ease: "easeInOut",
-                        }}
-                    />
-                ))}
             </div>
             
             {/* Abstract Background Glow in Hero - Animado */}

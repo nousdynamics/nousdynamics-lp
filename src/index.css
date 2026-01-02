@@ -62,7 +62,6 @@
 
   body {
     @apply bg-premium-dark text-[#FFFFFE] antialiased selection:bg-premium-gold/30 selection:text-premium-gold font-sans;
-    overflow-x: hidden;
   }
 
   /* Prevenir overflow horizontal e otimização de quebra de linha */
